@@ -1,0 +1,47 @@
+:root {
+
+    //fonts
+    --font-sans: 'industry','sans-serif';
+    --font-serif:  'abolition', serif;
+
+    //font base & scale
+    --font-base: 1rem;
+    --font-scale: 1.25;
+    --font-size-1: var(--font-base); 
+    --font-size-2: calc( var(--font-size-1) * var(--font-scale) );
+    --font-size-3: calc( var(--font-size-2) * var(--font-scale));
+    --font-size-4: calc( var(--font-size-3) * var(--font-scale));
+    --font-size-5: calc( var(--font-size-4) * var(--font-scale));
+    --font-size-6: calc( var(--font-size-5) * var(--font-scale));
+
+    //colors
+    --color-accent-red: #FD3E1D;
+    --color-accent-blue: #0584FF;
+    
+    --color-primary: #fff;
+    --color-medium: #435665;
+    --color-secondary: #3F4A53;
+    --color-dark: #2B3135;
+
+    //section gaps
+    --section-gap: 6.25rem; //100px
+    --section-gap-inner: calc( var(--section-gap) * 0.65); //65px
+    --section-gap-inner-small: calc( var(--section-gap) * 0.5); //50px
+
+    //grid gaps
+    --grid-gap: 2rem;
+
+    //page settings
+    --page-width: 80rem;
+    --page-padding: 5rem;
+
+
+    //menu settings
+    --menu-height: 148px;
+
+    //grids
+    --grid-container: minmax(var(--page-padding), 1fr) [inner-start] minmax(0,var(--page-width)) [inner-end] minmax(var(--page-padding), 1fr);
+    --grid-content: repeat(12, 1fr);
+
+
+}
