@@ -7,12 +7,12 @@
     //font base & scale
     --font-base: 1rem;
     --font-scale: 1.25;
-    --font-size-1: var(--font-base); 
-    --font-size-2: calc( var(--font-size-1) * var(--font-scale) );
-    --font-size-3: calc( var(--font-size-2) * var(--font-scale));
-    --font-size-4: calc( var(--font-size-3) * var(--font-scale));
-    --font-size-5: calc( var(--font-size-4) * var(--font-scale));
-    --font-size-6: calc( var(--font-size-5) * var(--font-scale));
+    --font-size-1: var(--font-base); //16
+    --font-size-2: calc( var(--font-size-1) * var(--font-scale)); //20
+    --font-size-3: calc( var(--font-size-2) * var(--font-scale)); //25
+    --font-size-4: calc( var(--font-size-3) * var(--font-scale)); //31,25
+    --font-size-5: calc( var(--font-size-4) * var(--font-scale)); //39,06
+    --font-size-6: calc( var(--font-size-5) * var(--font-scale)); //48,83
 
     //colors
     --color-accent-red: #FD3E1D;

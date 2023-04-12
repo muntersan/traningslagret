@@ -1,6 +1,7 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
+    color: var(--color-secondary);
 }
 
 h1 {
@@ -30,4 +31,6 @@ h6 {
 p, a, li {
     line-height: 1.5;
     font-family: var(--font-serif);
+    color: var(--color-medium);
+    font-style: italic;
 }
