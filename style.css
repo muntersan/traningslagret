@@ -45,6 +45,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   color: var(--color-secondary);
   font-style: italic;
+  margin: 0;
+  font-weight: 400;
 }
 
 h1 {
@@ -136,10 +138,13 @@ p, a, li {
   top: -7px;
 }
 
+.section {
+  padding-top: var(--section-gap-inner);
+}
+
 .hero {
   width: 100vw;
   height: 100vh;
-  position: absolute;
   background-image: url("assets/images/hero-background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -155,7 +160,7 @@ p, a, li {
 }
 .hero__inner .hero__content {
   grid-column: 1/8;
-  align-self: center;
+  margin-top: 260px;
 }
 .hero__inner .hero__content .hero__text {
   color: var(--color-primary);
@@ -211,6 +216,65 @@ p, a, li {
 }
 .hero__inner .hero__footer .socials .facebook {
   margin-right: 1rem;
+}
+
+.promo {
+  display: grid;
+  grid-template-columns: var(--grid-container);
+}
+.promo .promo__inner {
+  grid-column: inner;
+  display: grid;
+  grid-template-columns: var(--grid-content);
+  gap: var(--grid-gap);
+}
+.promo .promo__inner .promo-box {
+  grid-column: span 4;
+  height: 200px;
+  background-color: rgba(63, 74, 83, 0.07);
+  display: flex;
+  justify-content: space-between;
+}
+.promo .promo__inner .promo-box h1 {
+  font-size: 60px;
+}
+.promo .promo__inner .promo-box--pris {
+  background-color: var(--color-secondary);
+}
+.promo .promo__inner .promo-box--pris h4 {
+  color: var(--color-primary);
+  opacity: 80%;
+}
+.promo .promo__inner .promo-box--pris h1 {
+  color: var(--color-primary);
+}
+.promo .promo__inner .promo-box--pris p {
+  color: var(--color-primary);
+  opacity: 40%;
+  margin: 0;
+}
+.promo .promo__inner .promo-box--grupp h4 {
+  color: var(--color-secondary);
+}
+.promo .promo__inner .promo-box--grupp h1 {
+  color: var(--color-accent-red);
+}
+.promo .promo__inner .promo-box--prova h4 {
+  color: var(--color-secondary);
+  opacity: 60%;
+}
+.promo .promo__inner .promo-box--prova h1 {
+  color: var(--color-secondary);
+}
+.promo .promo__inner .promo-box__content {
+  margin-left: 3.5rem;
+  margin-top: 3rem;
+}
+.promo .promo__inner .promo-box .corner-link {
+  align-self: flex-end;
+}
+.promo .promo__inner .promo-box .corner-link #corner-light {
+  fill: #CCCFD1;
 }
 
 /*# sourceMappingURL=style.css.map */
