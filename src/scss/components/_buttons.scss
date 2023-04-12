@@ -1,11 +1,11 @@
 
-@mixin standard($background: var(--color-accent-red), $color: var(--color-primary) ) {
+@mixin standard($background: var(--color-accent-red), $color: var(--color-primary), $padding: 0.5rem 1rem, $font-size: var(--font-size-4), ) {
     background-color: $background;
     color: $color;
     display: inline-block;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    font-size: var(--font-size-4);
+    padding: $padding;
+    font-size: $font-size;
     font-family: var(--font-serif);
     border: 0;
     cursor: pointer;
