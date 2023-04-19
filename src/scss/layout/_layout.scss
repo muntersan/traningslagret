@@ -1,3 +1,12 @@
 .section{
     padding-top: var(--section-gap-inner);
+    display: grid;
+    grid-template-columns: var(--grid-container);
+
+    &__inner{
+        grid-column: inner;
+        display: grid;
+        grid-template-columns: var(--grid-content);
+        gap: var(--grid-gap);
+    }
 }

@@ -1,8 +1,7 @@
 @use '../components/buttons';
 
 .news{
-    display: grid;
-    grid-template-columns: var(--grid-container);
+    
 
     &__title{
         grid-column: inner;
@@ -12,9 +11,8 @@
     }
 
     &__inner{
-        grid-column: inner;
-        display: grid;
-        grid-template-columns: var(--grid-content);
+        
+       
         grid-template-rows: repeat(2, 1fr);
         gap: 1rem;
 

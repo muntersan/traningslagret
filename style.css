@@ -39,6 +39,7 @@ body {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,11 +76,97 @@ h6 {
 
 p, a, li {
   line-height: 1.5;
-  font-family: var(--font-serif);
   color: var(--color-medium);
-  font-style: italic;
   font-size: 18px;
   margin: 0;
+}
+
+p {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  line-height: 2;
+  font-style: normal;
+}
+
+a, li {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-style: normal;
+}
+
+.map {
+  margin-top: var(--section-gap-inner);
+  height: 490px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-image: url("assets/images/map.png");
+}
+
+.site-footer {
+  background-color: var(--color-dark);
+  display: grid;
+  grid-template-columns: var(--grid-container);
+}
+.site-footer__inner {
+  grid-column: inner;
+  padding: var(--section-gap-inner) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+}
+.site-footer__inner .address-info {
+  margin-top: 40px;
+}
+.site-footer__inner .address-info p, .site-footer__inner .address-info span {
+  font-size: var(--font-size-1);
+  color: var(--color-primary);
+  line-height: 1.5;
+}
+.site-footer__inner .address-info p {
+  font-weight: 400;
+}
+.site-footer__inner .address-info span {
+  font-weight: 700;
+}
+.site-footer__inner .socials {
+  display: flex;
+  list-style: none;
+  justify-content: right;
+  margin-top: 90px;
+}
+.site-footer__inner .socials .facebook {
+  margin-right: 1rem;
+}
+.site-footer__menu {
+  list-style: none;
+}
+.site-footer__menu .menu__item {
+  margin-bottom: 0.7rem;
+}
+.site-footer__menu a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-1);
+  font-weight: 400;
+}
+.site-footer__menu a:hover {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.copyright {
+  background-color: var(--color-dark);
+  display: grid;
+  grid-template-columns: var(--grid-container);
+}
+.copyright p {
+  grid-column: inner;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  font-size: var(--font-size-1);
+  padding: 15px 0 40px;
 }
 
 .site-header {
@@ -142,21 +229,22 @@ p, a, li {
 
 .section {
   padding-top: var(--section-gap-inner);
-}
-
-.news {
   display: grid;
   grid-template-columns: var(--grid-container);
 }
+.section__inner {
+  grid-column: inner;
+  display: grid;
+  grid-template-columns: var(--grid-content);
+  gap: var(--grid-gap);
+}
+
 .news__title {
   grid-column: inner;
   font-size: 61px;
   margin-bottom: var(--section-gap-inner);
 }
 .news__inner {
-  grid-column: inner;
-  display: grid;
-  grid-template-columns: var(--grid-content);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
 }
@@ -295,12 +383,103 @@ p, a, li {
   margin-right: 1rem;
 }
 
-.promo {
-  display: grid;
-  grid-template-columns: var(--grid-container);
-}
-.promo .promo__inner {
+.opening__header {
   grid-column: inner;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--section-gap-inner-small);
+}
+.opening__header .text {
+  display: flex;
+  align-items: baseline;
+}
+.opening__header .text h1 {
+  font-size: 3.8rem;
+  margin-right: 1.5rem;
+}
+.opening__header .text h2 {
+  font-size: var(--font-size-5);
+  color: var(--color-accent-blue);
+}
+.opening__header .calender-button {
+  background-color: var(--color-accent-red);
+  color: var(--color-primary);
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-4);
+  font-family: var(--font-serif);
+  border: 0;
+  cursor: pointer;
+  transform: skew(-10deg);
+}
+.opening__inner .opening__card {
+  grid-column: span 4;
+  padding: 2rem;
+}
+.opening__inner .opening__card h1 {
+  font-size: 3.8rem;
+  padding: 0 0 25px 2rem;
+}
+.opening__inner .opening__card-list {
+  list-style: none;
+  max-width: 370px;
+  padding: 0;
+  margin: 0;
+}
+.opening__inner .opening__card-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  align-items: center;
+}
+.opening__inner .opening__card-item:nth-child(5) {
+  color: var(--color-accent-blue);
+}
+.opening__inner .opening__card-item:nth-child(odd) {
+  background: rgba(63, 74, 83, 0.07);
+}
+.opening__inner .opening__card-item span {
+  font-size: var(--font-size-2);
+  font-family: var(--font-sans);
+  text-align: left;
+}
+.opening__inner .opening__card-item .day {
+  font-weight: 600;
+}
+.opening__inner .opening__card-item .hours {
+  font-weight: 400;
+}
+.opening__inner .opening-reception {
+  background-color: var(--color-medium);
+  position: relative;
+}
+.opening__inner .opening-reception .corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.opening__inner .opening-reception p {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+  margin-top: 1rem;
+}
+.opening__inner .opening-reception h1 {
+  color: var(--color-primary);
+}
+.opening__inner .opening-reception .opening__card-item {
+  color: var(--color-primary);
+}
+.opening__inner .opening-reception .opening__card-item:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.07);
+}
+.opening__inner .opening-reception .opening__card-item:nth-child(5) {
+  color: var(--color-accent-red);
+}
+
+.promo .promo__inner {
   display: grid;
   grid-template-columns: var(--grid-content);
   gap: var(--grid-gap);
@@ -329,6 +508,8 @@ p, a, li {
   color: var(--color-primary);
   opacity: 40%;
   margin: 0;
+  font-size: 11px;
+  font-weight: 400;
 }
 .promo .promo__inner .promo-box--grupp h4 {
   color: var(--color-secondary);
@@ -352,6 +533,36 @@ p, a, li {
 }
 .promo .promo__inner .promo-box .corner-link #corner-light {
   fill: #CCCFD1;
+}
+
+.promo-2__inner {
+  height: 370px;
+  background-image: url("assets/images/promo-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.promo-2__inner .promo-2__content {
+  grid-column: 1/13;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.promo-2__inner .promo-2__content .promo-2__text {
+  margin-left: 3rem;
+}
+.promo-2__inner .promo-2__content .promo-2__text h2, .promo-2__inner .promo-2__content .promo-2__text h1 {
+  color: var(--color-primary);
+}
+.promo-2__inner .promo-2__content .promo-2__text h1 {
+  font-size: 88px;
+}
+.promo-2__inner .promo-2__content .promo-2__text h2 {
+  font-size: var(--font-size-5);
+  opacity: 80%;
+}
+.promo-2__inner .promo-2__content .corner {
+  align-self: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */

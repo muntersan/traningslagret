@@ -1,11 +1,7 @@
 .promo{
-    display: grid;
-    grid-template-columns: var(--grid-container);
-    
-    
-
+  
     .promo__inner{
-        grid-column: inner;
+        
         display: grid;
         grid-template-columns: var(--grid-content);
         gap: var(--grid-gap);
@@ -35,6 +31,8 @@
                     color: var(--color-primary);
                     opacity: 40%;
                     margin: 0;
+                    font-size: 11px;
+                    font-weight: 400;
                 }
             }
 

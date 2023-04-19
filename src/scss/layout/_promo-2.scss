@@ -1,0 +1,42 @@
+.promo-2{
+  
+
+    &__inner{
+       
+        height: 370px;
+        
+        background-image: url("assets/images/promo-image.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .promo-2__content{
+            grid-column: 1/13;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            
+           .promo-2__text{
+            margin-left: 3rem;
+
+            h2,h1{
+                color: var(--color-primary);
+                
+            }
+
+            h1{
+                font-size: 88px;
+            }
+            h2{
+                font-size: var(--font-size-5);
+                opacity: 80%;
+            }
+           }
+            
+            .corner{
+                align-self: flex-end;
+            }
+        }
+       
+    }
+}
